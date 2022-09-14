@@ -1,0 +1,29 @@
+8.
+SELECT pemasok.NAPEM, pemasok.KOTA, barang.HARGA
+FROM pemasok
+INNER JOIN pemasokkan
+on pemasok.NOPEM = pemasokkan.NOPEM
+INNER JOIN barang
+ON pemasokkan.NOBAR = barang.NOBAR
+WHERE barang.HARGA >= 7000000 
+
+9.
+SELECT pemasok.NAPEM, pemasokkan.JUMLAH 
+FROM pemasok 
+INNER JOIN pemasokkan
+on pemasok.NOPEM = pemasokkan.NOPEM
+
+10.
+SELECT * FROM pemasokkan WHERE NOPEM ='P03'
+
+
+11.
+SELECT NOBAR, JUMLAH from pemasokkan
+
+
+12.
+SELECT * FROM pemasokkan where NOPEM IN ('P01', 'P02', 'P03', 'P05');
+
+13.
+SELECT * FROM pemasok
+WHERE Napem LIKE 'p%';
