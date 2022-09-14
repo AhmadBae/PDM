@@ -22,14 +22,6 @@ INNER JOIN barang
 ON pemasokkan.NOBAR = barang.NOBAR
 WHERE barang.HARGA >= 7000000 
 
-SELECT pemasok.NAPEM, pemasok.KOTA, barang.HARGA
-FROM pemasok
-INNER JOIN pemasokkan
-on pemasok.NOPEM = pemasokkan.NOPEM
-INNER JOIN barang
-ON pemasokkan.NOBAR = barang.NOBAR
-WHERE barang.HARGA >= 7000000 
-
 ORDER BY pemasok.NAPEM ASC;
 
 9.
